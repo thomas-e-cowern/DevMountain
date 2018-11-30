@@ -1,0 +1,15 @@
+de    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Check the segues identifier
+        // Get the new view controller using segueDestinationViewController
+        // Get the day of the week the user tapped on
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "toDetailView" {
+            if let destinationViewController = segue.destination as? DayViewController {
+                if let indexpath = tableView.indexPathForSelectedRow {
+                    let day = weekdays[indexpath.row]
+                    destinationViewController.day = day
+                }
+            }
+        }
+    

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uST-M1-MsJ">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DvmDisco23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS 23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSb-bT-YAT">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="k7e-0r-ybe"/>
+                                    <constraint firstAttribute="height" constant="60" id="tUU-fD-QES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-aQ-vcz">
+                                <rect key="frame" x="177.66666666666666" y="498" width="59" height="30"/>
+                                <state key="normal" title="To Disco"/>
+                                <connections>
+                                    <segue destination="nJ7-wG-ilq" kind="show" id="2sH-0h-vHO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tSb-bT-YAT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AfP-vT-vw6"/>
+                            <constraint firstItem="WCy-aQ-vcz" firstAttribute="top" secondItem="tSb-bT-YAT" secondAttribute="bottom" constant="20" id="QeM-IJ-fet"/>
+                            <constraint firstItem="tSb-bT-YAT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gYx-uT-bpy"/>
+                            <constraint firstItem="WCy-aQ-vcz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kT8-j7-0cr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ghf-9o-zLq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981.15942028985512" y="-540.40178571428567"/>
+        </scene>
+        <!--Disco View Controller-->
+        <scene sceneID="UHD-UR-rUW">
+            <objects>
+                <viewController id="nJ7-wG-ilq" customClass="DiscoViewController" customModule="DvmDisco23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kc5-Os-z6U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKr-9w-TY1">
+                                <rect key="frame" x="169.66666666666666" y="138" width="75" height="30"/>
+                                <state key="normal" title="To Sign Up"/>
+                                <connections>
+                                    <segue destination="TkJ-5d-mOH" kind="show" id="qw0-ZO-RSw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfI-Mu-Vcw">
+                                <rect key="frame" x="142.66666666666666" y="428.66666666666669" width="128.99999999999997" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Tap To Disco"/>
+                                <connections>
+                                    <action selector="tapToDiscoButtonTapped:" destination="nJ7-wG-ilq" eventType="touchUpInside" id="XuR-gA-Cki"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="p3W-5P-y13">
+                                <rect key="frame" x="0.0" y="742" width="414" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYD-wa-Anm">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="To Orange">
+                                            <color key="titleColor" red="1" green="0.57722102194748692" blue="0.23952037303272566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="6XA-U9-Z8I" kind="show" id="S7M-YC-qCS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gl-N9-2dn">
+                                        <rect key="frame" x="158" y="0.0" width="98" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="To Yellow">
+                                            <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="bGP-ge-OQG" kind="show" id="PtY-Vb-H97"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W39-JQ-Ua6">
+                                        <rect key="frame" x="316" y="0.0" width="98" height="30"/>
+                                        <state key="normal" title="To Purple">
+                                            <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="PLw-EO-Qhw" kind="presentation" id="OmR-aL-Cj3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p3W-5P-y13" firstAttribute="width" secondItem="Kc5-Os-z6U" secondAttribute="width" id="8m7-XV-SFa"/>
+                            <constraint firstItem="VmX-fE-BHA" firstAttribute="bottom" secondItem="p3W-5P-y13" secondAttribute="bottom" constant="90" id="GSx-ud-i0g"/>
+                            <constraint firstItem="ZKr-9w-TY1" firstAttribute="centerX" secondItem="Kc5-Os-z6U" secondAttribute="centerX" id="OA1-5e-VFJ"/>
+                            <constraint firstItem="ZKr-9w-TY1" firstAttribute="top" secondItem="VmX-fE-BHA" secondAttribute="top" constant="50" id="Ukj-9E-m6D"/>
+                            <constraint firstItem="p3W-5P-y13" firstAttribute="centerX" secondItem="Kc5-Os-z6U" secondAttribute="centerX" id="ZuK-uN-dqP"/>
+                            <constraint firstItem="zfI-Mu-Vcw" firstAttribute="centerY" secondItem="Kc5-Os-z6U" secondAttribute="centerY" id="cPT-RS-Dt7"/>
+                            <constraint firstItem="zfI-Mu-Vcw" firstAttribute="centerX" secondItem="Kc5-Os-z6U" secondAttribute="centerX" id="n0c-3e-fA6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VmX-fE-BHA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRM-T0-qUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.6231884057972" y="-540.40178571428567"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="tPc-U4-dJK">
+            <objects>
+                <viewController id="TkJ-5d-mOH" customClass="SignUpViewController" customModule="DvmDisco23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hAV-4j-mMa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="K0f-kt-7J9">
+                                <rect key="frame" x="0.0" y="366" width="414" height="164.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type name to sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfa-Sq-UwW">
+                                        <rect key="frame" x="125" y="0.0" width="164" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psy-al-tG8">
+                                        <rect key="frame" x="41.333333333333343" y="62.333333333333314" width="331.33333333333326" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="nameTextField:" destination="TkJ-5d-mOH" eventType="editingDidEnd" id="J1s-Du-1dA"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CW-cs-dTi">
+                                        <rect key="frame" x="181" y="134.33333333333331" width="52" height="30"/>
+                                        <state key="normal" title="Sign up"/>
+                                        <connections>
+                                            <segue destination="6Ye-0G-Dc5" kind="show" identifier="ToWelcomeScreen" id="hFM-ya-tw9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K0f-kt-7J9" firstAttribute="width" secondItem="hAV-4j-mMa" secondAttribute="width" id="2y6-fz-gQj"/>
+                            <constraint firstItem="psy-al-tG8" firstAttribute="width" secondItem="hAV-4j-mMa" secondAttribute="width" multiplier="0.8" id="A2I-t1-C3g"/>
+                            <constraint firstItem="K0f-kt-7J9" firstAttribute="centerX" secondItem="hAV-4j-mMa" secondAttribute="centerX" id="Gk4-zp-kAH"/>
+                            <constraint firstItem="K0f-kt-7J9" firstAttribute="centerY" secondItem="hAV-4j-mMa" secondAttribute="centerY" id="Xf2-gd-t85"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WBE-Ko-J4E"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k3h-b9-g7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2534.7826086956525" y="-540.40178571428567"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="6eB-D7-MiJ">
+            <objects>
+                <viewController id="6Ye-0G-Dc5" customClass="WelcomeViewController" customModule="DvmDisco23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nUi-ki-f2o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Welcome &lt;Name&gt;)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWA-jO-QMo">
+                                <rect key="frame" x="130" y="437.66666666666669" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QWA-jO-QMo" firstAttribute="centerX" secondItem="nUi-ki-f2o" secondAttribute="centerX" id="ZYN-0U-JNC"/>
+                            <constraint firstItem="QWA-jO-QMo" firstAttribute="centerY" secondItem="nUi-ki-f2o" secondAttribute="centerY" id="xIe-jl-1jr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ntM-GG-a7i"/>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="QWA-jO-QMo" id="exx-zA-6lt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDZ-zJ-T9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3314" y="-540"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aLW-0o-ppQ">
+            <objects>
+                <viewController id="6XA-U9-Z8I" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uZG-b0-pbC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="E12-iS-fA9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xv-0c-nTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="220"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x9U-YZ-TXk">
+            <objects>
+                <viewController id="bGP-ge-OQG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ovy-KS-ykh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="dYx-tv-ml6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="olA-D5-Z1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="220"/>
+        </scene>
+        <!--Purple View Controller-->
+        <scene sceneID="nxT-Mt-lc8">
+            <objects>
+                <viewController id="PLw-EO-Qhw" customClass="PurpleViewController" customModule="DvmDisco23" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fj2-am-Wly">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW3-Bd-Af4">
+                                <rect key="frame" x="160.66666666666666" y="427" width="93" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonTaped:" destination="PLw-EO-Qhw" eventType="touchUpInside" id="HJQ-cR-B85"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pW3-Bd-Af4" firstAttribute="centerX" secondItem="fj2-am-Wly" secondAttribute="centerX" id="RiI-fi-JHW"/>
+                            <constraint firstItem="pW3-Bd-Af4" firstAttribute="centerY" secondItem="fj2-am-Wly" secondAttribute="centerY" id="bL1-hF-juq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7oJ-iP-J8i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kih-FK-dx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2546" y="220"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h2D-ik-DNa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uST-M1-MsJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z6v-fr-wVI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X6f-MX-vos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wdA-10-EYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156.52173913043478" y="-540.40178571428567"/>
+        </scene>
+    </scenes>
+</document>
