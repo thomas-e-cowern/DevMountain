@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6in-1a-WrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quotes-->
+        <scene sceneID="fxo-7o-JyR">
+            <objects>
+                <tableViewController id="Obr-Bz-07E" customClass="QuotesTableViewController" customModule="KanyeQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0XR-pG-adD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="kanyeView" rowHeight="150" id="FXb-uF-3g6" customClass="KanyeTableViewCell" customModule="KanyeQuotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FXb-uF-3g6" id="dee-Ai-HQ1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Quote)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGl-Mg-sRB">
+                                            <rect key="frame" x="24" y="19" width="203" height="112"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4Y-wD-wLR">
+                                            <rect key="frame" x="235" y="12.5" width="125" height="125"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="125" id="gXJ-px-grF"/>
+                                                <constraint firstAttribute="width" constant="125" id="h9v-PC-mjy"/>
+                                            </constraints>
+                                            <state key="normal" backgroundImage="yesKanye"/>
+                                            <connections>
+                                                <action selector="quoteButtonTapped:" destination="FXb-uF-3g6" eventType="touchUpInside" id="9GC-hf-bef"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DGl-Mg-sRB" firstAttribute="top" secondItem="dee-Ai-HQ1" secondAttribute="topMargin" constant="8" id="1gI-Ft-8ZV"/>
+                                        <constraint firstAttribute="trailing" secondItem="m4Y-wD-wLR" secondAttribute="trailing" constant="15" id="D8R-tQ-xJI"/>
+                                        <constraint firstItem="m4Y-wD-wLR" firstAttribute="leading" secondItem="DGl-Mg-sRB" secondAttribute="trailing" constant="8" id="UCq-Vn-rpb"/>
+                                        <constraint firstItem="DGl-Mg-sRB" firstAttribute="leading" secondItem="dee-Ai-HQ1" secondAttribute="leadingMargin" constant="8" id="mzl-OJ-Xjv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="DGl-Mg-sRB" secondAttribute="bottom" constant="8" id="pls-a3-37a"/>
+                                        <constraint firstItem="m4Y-wD-wLR" firstAttribute="centerY" secondItem="dee-Ai-HQ1" secondAttribute="centerY" id="tut-5A-OZR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="isKanyeQuoteButton" destination="m4Y-wD-wLR" id="1jV-zv-bIf"/>
+                                    <outlet property="quoteLabel" destination="DGl-Mg-sRB" id="cmk-i0-89A"/>
+                                    <segue destination="zjg-qc-OSM" kind="show" identifier="toDetailViewController" id="FjB-g3-kxL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Obr-Bz-07E" id="V2D-c0-TiT"/>
+                            <outlet property="delegate" destination="Obr-Bz-07E" id="REf-0j-7jn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Quotes" id="qrK-lc-ac7">
+                        <barButtonItem key="rightBarButtonItem" title="New Quote" id="04L-vn-pdm">
+                            <connections>
+                                <action selector="newQuoteButtonTapped:" destination="Obr-Bz-07E" id="Jr9-k4-PjY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQj-1F-gqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="607" y="124"/>
+        </scene>
+        <!--Quote Detail View Controller-->
+        <scene sceneID="z8T-LX-mta">
+            <objects>
+                <viewController id="zjg-qc-OSM" customClass="QuoteDetailViewController" customModule="KanyeQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8PG-en-CXS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happyKanye" translatesAutoresizingMaskIntoConstraints="NO" id="Piu-ZF-v1h">
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Zwv-Ce-uvX"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g97-TC-Z1W">
+                                <rect key="frame" x="8" y="72" width="359" height="387"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Quote)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFc-XB-ZYa">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="129"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did Kanye Say it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqL-om-Ti2">
+                                        <rect key="frame" x="0.0" y="129" width="359" height="129"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Yes/No)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8L4-ui-w8c">
+                                        <rect key="frame" x="0.0" y="258" width="359" height="129"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9Vu-Nn-vAA" firstAttribute="trailing" secondItem="g97-TC-Z1W" secondAttribute="trailing" constant="8" id="B2a-x6-dbK"/>
+                            <constraint firstItem="9Vu-Nn-vAA" firstAttribute="bottom" secondItem="Piu-ZF-v1h" secondAttribute="bottom" id="FSJ-J5-pa1"/>
+                            <constraint firstItem="g97-TC-Z1W" firstAttribute="leading" secondItem="9Vu-Nn-vAA" secondAttribute="leading" constant="8" id="GKJ-iF-IYY"/>
+                            <constraint firstItem="g97-TC-Z1W" firstAttribute="top" secondItem="9Vu-Nn-vAA" secondAttribute="top" constant="8" id="Xe9-3W-Am1"/>
+                            <constraint firstItem="9Vu-Nn-vAA" firstAttribute="trailing" secondItem="Piu-ZF-v1h" secondAttribute="trailing" id="mCY-WN-AXU"/>
+                            <constraint firstItem="Piu-ZF-v1h" firstAttribute="top" secondItem="g97-TC-Z1W" secondAttribute="bottom" constant="8" id="qCN-Px-gt0"/>
+                            <constraint firstItem="Piu-ZF-v1h" firstAttribute="leading" secondItem="9Vu-Nn-vAA" secondAttribute="leading" id="w0P-JJ-lyj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Vu-Nn-vAA"/>
+                    </view>
+                    <connections>
+                        <outlet property="KanyeWestImageView" destination="Piu-ZF-v1h" id="OoA-23-SSE"/>
+                        <outlet property="didHeSayItLabel" destination="8L4-ui-w8c" id="A9O-8A-g3T"/>
+                        <outlet property="quoteLabel" destination="tFc-XB-ZYa" id="YwR-MD-tur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUB-Oo-0M4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Keh-ET-RKS">
+            <objects>
+                <navigationController id="6in-1a-WrT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5rT-rL-hxx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Obr-Bz-07E" kind="relationship" relationship="rootViewController" id="GDV-2L-lag"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cV4-KM-GAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="happyKanye" width="432" height="226.80000305175781"/>
+        <image name="yesKanye" width="500" height="500"/>
+    </resources>
+</document>

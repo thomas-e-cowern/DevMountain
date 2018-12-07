@@ -14,6 +14,12 @@ class TaskListTableViewController: UITableViewController, ButtonTableViewCellDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print("😡 There was an error in \(#function) ; \(error) ; \(error.localizedDescription)")
+        }
+        
         fetchedResultsController.delegate = self
         
         do {
