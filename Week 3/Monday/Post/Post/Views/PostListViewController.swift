@@ -84,7 +84,7 @@ extension PostListViewController {
                 if usernameTextField.text != "" && messageTextField.text != "" {
                     if let username = usernameTextField.text, let message = messageTextField.text {
                         PostController.addNewPostWith(username: username , text: message, completion: {_ in
-                            self.reloadDataView()
+                            self.tableView.reloadData()
                         })
                     }
                 }
