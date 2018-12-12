@@ -1,9 +1,8 @@
 //
 //  AppDelegate.swift
-//  Post
+//  PokeDex
 //
 //  Created by Thomas Cowern New on 12/10/18.
-//  Copyright © 2018 vetDevHouse. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        // Override point for customization after application launch.
         return true
     }
 

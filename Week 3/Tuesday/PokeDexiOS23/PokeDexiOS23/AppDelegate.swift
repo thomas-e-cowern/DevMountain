@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Post
+//  PokeDexiOS23
 //
-//  Created by Thomas Cowern New on 12/10/18.
-//  Copyright © 2018 vetDevHouse. All rights reserved.
+//  Created by Thomas Cowern New on 12/11/18.
+//  Copyright © 2018 Thomas Cowern New. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
         
+        PokemonController.shared.fetchPokemonWithName(nameOrId: "squirtle") { (pokemon) in
+            print(pokemon)
+        }
         return true
     }
 

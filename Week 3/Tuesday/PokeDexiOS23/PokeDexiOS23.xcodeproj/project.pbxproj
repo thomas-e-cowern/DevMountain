@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		413B9B9D21BEBCCE0071D0AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B9B9C21BEBCCE0071D0AA /* AppDelegate.swift */; };
-		413B9BA221BEBCCE0071D0AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413B9BA021BEBCCE0071D0AA /* Main.storyboard */; };
-		413B9BA421BEBCD40071D0AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413B9BA321BEBCD40071D0AA /* Assets.xcassets */; };
-		413B9BA721BEBCD40071D0AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413B9BA521BEBCD40071D0AA /* LaunchScreen.storyboard */; };
-		413B9BB321BEBD410071D0AA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B9BB221BEBD410071D0AA /* Post.swift */; };
-		413B9BB521BEC2010071D0AA /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B9BB421BEC2010071D0AA /* PostController.swift */; };
-		418720AE21BF1E6400E6BFFE /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418720AD21BF1E6400E6BFFE /* PostListViewController.swift */; };
+		41A8DBC021C05636006AD949 /* PokeDexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DBBF21C05636006AD949 /* PokeDexViewController.swift */; };
+		41BA3C4321C029D40008B1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA3C4221C029D40008B1DB /* AppDelegate.swift */; };
+		41BA3C4821C029D40008B1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BA3C4621C029D40008B1DB /* Main.storyboard */; };
+		41BA3C4A21C029DE0008B1DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41BA3C4921C029DE0008B1DB /* Assets.xcassets */; };
+		41BA3C4D21C029DE0008B1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BA3C4B21C029DE0008B1DB /* LaunchScreen.storyboard */; };
+		41BA3C5521C032670008B1DB /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA3C5421C032670008B1DB /* Pokemon.swift */; };
+		41BA3C5721C03C080008B1DB /* PokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BA3C5621C03C080008B1DB /* PokemonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		413B9B9921BEBCCE0071D0AA /* Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Post.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		413B9B9C21BEBCCE0071D0AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		413B9BA121BEBCCE0071D0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		413B9BA321BEBCD40071D0AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		413B9BA621BEBCD40071D0AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		413B9BA821BEBCD40071D0AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		413B9BB221BEBD410071D0AA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		413B9BB421BEC2010071D0AA /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
-		418720AD21BF1E6400E6BFFE /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		41A8DBBF21C05636006AD949 /* PokeDexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDexViewController.swift; sourceTree = "<group>"; };
+		41BA3C3F21C029D40008B1DB /* PokeDexiOS23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeDexiOS23.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41BA3C4221C029D40008B1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		41BA3C4721C029D40008B1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		41BA3C4921C029DE0008B1DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41BA3C4C21C029DE0008B1DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41BA3C4E21C029DE0008B1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41BA3C5421C032670008B1DB /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		41BA3C5621C03C080008B1DB /* PokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		413B9B9621BEBCCE0071D0AA /* Frameworks */ = {
+		41BA3C3C21C029D40008B1DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,105 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		413B9B9021BEBCCE0071D0AA = {
+		41BA3C3621C029D40008B1DB = {
 			isa = PBXGroup;
 			children = (
-				413B9B9B21BEBCCE0071D0AA /* Post */,
-				413B9B9A21BEBCCE0071D0AA /* Products */,
+				41BA3C4121C029D40008B1DB /* PokeDexiOS23 */,
+				41BA3C4021C029D40008B1DB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		413B9B9A21BEBCCE0071D0AA /* Products */ = {
+		41BA3C4021C029D40008B1DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				413B9B9921BEBCCE0071D0AA /* Post.app */,
+				41BA3C3F21C029D40008B1DB /* PokeDexiOS23.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		413B9B9B21BEBCCE0071D0AA /* Post */ = {
+		41BA3C4121C029D40008B1DB /* PokeDexiOS23 */ = {
 			isa = PBXGroup;
 			children = (
-				413B9BB121BEBCF00071D0AA /* Models */,
-				413B9BB021BEBCEE0071D0AA /* Views */,
-				413B9BAF21BEBCEB0071D0AA /* Controllers */,
-				413B9BAE21BEBCE70071D0AA /* Resources */,
+				41BA3C4221C029D40008B1DB /* AppDelegate.swift */,
+				41BA3C4621C029D40008B1DB /* Main.storyboard */,
+				41A8DBBF21C05636006AD949 /* PokeDexViewController.swift */,
+				41BA3C5421C032670008B1DB /* Pokemon.swift */,
+				41BA3C5621C03C080008B1DB /* PokemonController.swift */,
+				41BA3C4921C029DE0008B1DB /* Assets.xcassets */,
+				41BA3C4B21C029DE0008B1DB /* LaunchScreen.storyboard */,
+				41BA3C4E21C029DE0008B1DB /* Info.plist */,
 			);
-			path = Post;
-			sourceTree = "<group>";
-		};
-		413B9BAE21BEBCE70071D0AA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				413B9BA321BEBCD40071D0AA /* Assets.xcassets */,
-				413B9BA821BEBCD40071D0AA /* Info.plist */,
-				413B9B9C21BEBCCE0071D0AA /* AppDelegate.swift */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		413B9BAF21BEBCEB0071D0AA /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				413B9BB421BEC2010071D0AA /* PostController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		413B9BB021BEBCEE0071D0AA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				413B9BA021BEBCCE0071D0AA /* Main.storyboard */,
-				418720AD21BF1E6400E6BFFE /* PostListViewController.swift */,
-				413B9BA521BEBCD40071D0AA /* LaunchScreen.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		413B9BB121BEBCF00071D0AA /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				413B9BB221BEBD410071D0AA /* Post.swift */,
-			);
-			path = Models;
+			path = PokeDexiOS23;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		413B9B9821BEBCCE0071D0AA /* Post */ = {
+		41BA3C3E21C029D40008B1DB /* PokeDexiOS23 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 413B9BAB21BEBCD40071D0AA /* Build configuration list for PBXNativeTarget "Post" */;
+			buildConfigurationList = 41BA3C5121C029DE0008B1DB /* Build configuration list for PBXNativeTarget "PokeDexiOS23" */;
 			buildPhases = (
-				413B9B9521BEBCCE0071D0AA /* Sources */,
-				413B9B9621BEBCCE0071D0AA /* Frameworks */,
-				413B9B9721BEBCCE0071D0AA /* Resources */,
+				41BA3C3B21C029D40008B1DB /* Sources */,
+				41BA3C3C21C029D40008B1DB /* Frameworks */,
+				41BA3C3D21C029D40008B1DB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Post;
-			productName = Post;
-			productReference = 413B9B9921BEBCCE0071D0AA /* Post.app */;
+			name = PokeDexiOS23;
+			productName = PokeDexiOS23;
+			productReference = 41BA3C3F21C029D40008B1DB /* PokeDexiOS23.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		413B9B9121BEBCCE0071D0AA /* Project object */ = {
+		41BA3C3721C029D40008B1DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = vetDevHouse;
+				ORGANIZATIONNAME = "Thomas Cowern New";
 				TargetAttributes = {
-					413B9B9821BEBCCE0071D0AA = {
+					41BA3C3E21C029D40008B1DB = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 413B9B9421BEBCCE0071D0AA /* Build configuration list for PBXProject "Post" */;
+			buildConfigurationList = 41BA3C3A21C029D40008B1DB /* Build configuration list for PBXProject "PokeDexiOS23" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,56 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 413B9B9021BEBCCE0071D0AA;
-			productRefGroup = 413B9B9A21BEBCCE0071D0AA /* Products */;
+			mainGroup = 41BA3C3621C029D40008B1DB;
+			productRefGroup = 41BA3C4021C029D40008B1DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				413B9B9821BEBCCE0071D0AA /* Post */,
+				41BA3C3E21C029D40008B1DB /* PokeDexiOS23 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		413B9B9721BEBCCE0071D0AA /* Resources */ = {
+		41BA3C3D21C029D40008B1DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				413B9BA721BEBCD40071D0AA /* LaunchScreen.storyboard in Resources */,
-				413B9BA421BEBCD40071D0AA /* Assets.xcassets in Resources */,
-				413B9BA221BEBCCE0071D0AA /* Main.storyboard in Resources */,
+				41BA3C4D21C029DE0008B1DB /* LaunchScreen.storyboard in Resources */,
+				41BA3C4A21C029DE0008B1DB /* Assets.xcassets in Resources */,
+				41BA3C4821C029D40008B1DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		413B9B9521BEBCCE0071D0AA /* Sources */ = {
+		41BA3C3B21C029D40008B1DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418720AE21BF1E6400E6BFFE /* PostListViewController.swift in Sources */,
-				413B9BB321BEBD410071D0AA /* Post.swift in Sources */,
-				413B9BB521BEC2010071D0AA /* PostController.swift in Sources */,
-				413B9B9D21BEBCCE0071D0AA /* AppDelegate.swift in Sources */,
+				41BA3C4321C029D40008B1DB /* AppDelegate.swift in Sources */,
+				41A8DBC021C05636006AD949 /* PokeDexViewController.swift in Sources */,
+				41BA3C5521C032670008B1DB /* Pokemon.swift in Sources */,
+				41BA3C5721C03C080008B1DB /* PokemonController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		413B9BA021BEBCCE0071D0AA /* Main.storyboard */ = {
+		41BA3C4621C029D40008B1DB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				413B9BA121BEBCCE0071D0AA /* Base */,
+				41BA3C4721C029D40008B1DB /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		413B9BA521BEBCD40071D0AA /* LaunchScreen.storyboard */ = {
+		41BA3C4B21C029DE0008B1DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				413B9BA621BEBCD40071D0AA /* Base */,
+				41BA3C4C21C029DE0008B1DB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -202,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		413B9BA921BEBCD40071D0AA /* Debug */ = {
+		41BA3C4F21C029DE0008B1DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		413B9BAA21BEBCD40071D0AA /* Release */ = {
+		41BA3C5021C029DE0008B1DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -318,36 +286,36 @@
 			};
 			name = Release;
 		};
-		413B9BAC21BEBCD40071D0AA /* Debug */ = {
+		41BA3C5221C029DE0008B1DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
-				INFOPLIST_FILE = "$(SRCROOT)/Post/Resources/Info.plist";
+				INFOPLIST_FILE = PokeDexiOS23/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.Post;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.PokeDexiOS23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		413B9BAD21BEBCD40071D0AA /* Release */ = {
+		41BA3C5321C029DE0008B1DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
-				INFOPLIST_FILE = "$(SRCROOT)/Post/Resources/Info.plist";
+				INFOPLIST_FILE = PokeDexiOS23/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.Post;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.PokeDexiOS23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,25 +325,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		413B9B9421BEBCCE0071D0AA /* Build configuration list for PBXProject "Post" */ = {
+		41BA3C3A21C029D40008B1DB /* Build configuration list for PBXProject "PokeDexiOS23" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				413B9BA921BEBCD40071D0AA /* Debug */,
-				413B9BAA21BEBCD40071D0AA /* Release */,
+				41BA3C4F21C029DE0008B1DB /* Debug */,
+				41BA3C5021C029DE0008B1DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		413B9BAB21BEBCD40071D0AA /* Build configuration list for PBXNativeTarget "Post" */ = {
+		41BA3C5121C029DE0008B1DB /* Build configuration list for PBXNativeTarget "PokeDexiOS23" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				413B9BAC21BEBCD40071D0AA /* Debug */,
-				413B9BAD21BEBCD40071D0AA /* Release */,
+				41BA3C5221C029DE0008B1DB /* Debug */,
+				41BA3C5321C029DE0008B1DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 413B9B9121BEBCCE0071D0AA /* Project object */;
+	rootObject = 41BA3C3721C029D40008B1DB /* Project object */;
 }
