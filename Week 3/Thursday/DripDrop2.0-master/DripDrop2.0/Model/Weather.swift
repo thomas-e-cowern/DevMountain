@@ -10,7 +10,7 @@ import Foundation
 
 struct WeatherService: Codable {
     let currentWeather: CurrentWeather
-    let weeklyWeater: WeeklyWeather
+    let weeklyWeather: WeeklyWeather
     
     enum CodingKeys: String, CodingKey {
         case currentWeather = "currently"
@@ -49,5 +49,9 @@ struct DailyWeather: Codable {
         case iconName = "icon"
         case temperatureHigh
         case temperatureLow
+    }
+    
+    var avgTemperature: Double {
+        return (temperatureLow + temperatureHigh) / 2
     }
 }
