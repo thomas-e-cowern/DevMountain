@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41C880E621C5ADBC00709B8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C880E521C5ADBC00709B8C /* AppDelegate.m */; };
+		41C880EC21C5ADBC00709B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C880EA21C5ADBC00709B8C /* Main.storyboard */; };
+		41C880EE21C5ADC300709B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41C880ED21C5ADC300709B8C /* Assets.xcassets */; };
+		41C880F121C5ADC300709B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41C880EF21C5ADC300709B8C /* LaunchScreen.storyboard */; };
+		41C880F421C5ADC300709B8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C880F321C5ADC300709B8C /* main.m */; };
+		41C880FC21C5B09600709B8C /* PlanetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C880FB21C5B09600709B8C /* PlanetTableViewController.m */; };
+		41C880FF21C5B0EF00709B8C /* PlanetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C880FE21C5B0EF00709B8C /* PlanetDetailViewController.m */; };
+		41C8810221C5B28B00709B8C /* Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 41C8810121C5B28B00709B8C /* Planet.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		41C880E121C5ADBC00709B8C /* SolarSystemObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarSystemObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41C880E421C5ADBC00709B8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		41C880E521C5ADBC00709B8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		41C880EB21C5ADBC00709B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		41C880ED21C5ADC300709B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41C880F021C5ADC300709B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41C880F221C5ADC300709B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41C880F321C5ADC300709B8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41C880FA21C5B09600709B8C /* PlanetTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetTableViewController.h; sourceTree = "<group>"; };
+		41C880FB21C5B09600709B8C /* PlanetTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetTableViewController.m; sourceTree = "<group>"; };
+		41C880FD21C5B0EF00709B8C /* PlanetDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetDetailViewController.h; sourceTree = "<group>"; };
+		41C880FE21C5B0EF00709B8C /* PlanetDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetDetailViewController.m; sourceTree = "<group>"; };
+		41C8810021C5B28B00709B8C /* Planet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Planet.h; sourceTree = "<group>"; };
+		41C8810121C5B28B00709B8C /* Planet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Planet.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41C880DE21C5ADBB00709B8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41C880D821C5ADBB00709B8C = {
+			isa = PBXGroup;
+			children = (
+				41C880E321C5ADBC00709B8C /* SolarSystemObjC */,
+				41C880E221C5ADBC00709B8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41C880E221C5ADBC00709B8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41C880E121C5ADBC00709B8C /* SolarSystemObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41C880E321C5ADBC00709B8C /* SolarSystemObjC */ = {
+			isa = PBXGroup;
+			children = (
+				41C880E421C5ADBC00709B8C /* AppDelegate.h */,
+				41C880E521C5ADBC00709B8C /* AppDelegate.m */,
+				41C880EA21C5ADBC00709B8C /* Main.storyboard */,
+				41C8810021C5B28B00709B8C /* Planet.h */,
+				41C8810121C5B28B00709B8C /* Planet.m */,
+				41C880FD21C5B0EF00709B8C /* PlanetDetailViewController.h */,
+				41C880FE21C5B0EF00709B8C /* PlanetDetailViewController.m */,
+				41C880FA21C5B09600709B8C /* PlanetTableViewController.h */,
+				41C880FB21C5B09600709B8C /* PlanetTableViewController.m */,
+				41C880ED21C5ADC300709B8C /* Assets.xcassets */,
+				41C880EF21C5ADC300709B8C /* LaunchScreen.storyboard */,
+				41C880F221C5ADC300709B8C /* Info.plist */,
+				41C880F321C5ADC300709B8C /* main.m */,
+			);
+			path = SolarSystemObjC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41C880E021C5ADBB00709B8C /* SolarSystemObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41C880F721C5ADC300709B8C /* Build configuration list for PBXNativeTarget "SolarSystemObjC" */;
+			buildPhases = (
+				41C880DD21C5ADBB00709B8C /* Sources */,
+				41C880DE21C5ADBB00709B8C /* Frameworks */,
+				41C880DF21C5ADBB00709B8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SolarSystemObjC;
+			productName = SolarSystemObjC;
+			productReference = 41C880E121C5ADBC00709B8C /* SolarSystemObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		41C880D921C5ADBB00709B8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Thomas Cowern New";
+				TargetAttributes = {
+					41C880E021C5ADBB00709B8C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 41C880DC21C5ADBB00709B8C /* Build configuration list for PBXProject "SolarSystemObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 41C880D821C5ADBB00709B8C;
+			productRefGroup = 41C880E221C5ADBC00709B8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41C880E021C5ADBB00709B8C /* SolarSystemObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41C880DF21C5ADBB00709B8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41C880F121C5ADC300709B8C /* LaunchScreen.storyboard in Resources */,
+				41C880EE21C5ADC300709B8C /* Assets.xcassets in Resources */,
+				41C880EC21C5ADBC00709B8C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41C880DD21C5ADBB00709B8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41C8810221C5B28B00709B8C /* Planet.m in Sources */,
+				41C880FC21C5B09600709B8C /* PlanetTableViewController.m in Sources */,
+				41C880FF21C5B0EF00709B8C /* PlanetDetailViewController.m in Sources */,
+				41C880F421C5ADC300709B8C /* main.m in Sources */,
+				41C880E621C5ADBC00709B8C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		41C880EA21C5ADBC00709B8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41C880EB21C5ADBC00709B8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		41C880EF21C5ADC300709B8C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41C880F021C5ADC300709B8C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41C880F521C5ADC300709B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		41C880F621C5ADC300709B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41C880F821C5ADC300709B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				INFOPLIST_FILE = SolarSystemObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.SolarSystemObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41C880F921C5ADC300709B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				INFOPLIST_FILE = SolarSystemObjC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.SolarSystemObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41C880DC21C5ADBB00709B8C /* Build configuration list for PBXProject "SolarSystemObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41C880F521C5ADC300709B8C /* Debug */,
+				41C880F621C5ADC300709B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41C880F721C5ADC300709B8C /* Build configuration list for PBXNativeTarget "SolarSystemObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41C880F821C5ADC300709B8C /* Debug */,
+				41C880F921C5ADC300709B8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 41C880D921C5ADBB00709B8C /* Project object */;
+}
