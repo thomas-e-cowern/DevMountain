@@ -17,6 +17,7 @@
     dispatch_once(&onceToken, ^{
         shared = [[TECEntryController alloc] init];
         shared.entries = [NSMutableArray new];
+        [shared loadFromPersistentStorage];
     });
     return shared;
 }
