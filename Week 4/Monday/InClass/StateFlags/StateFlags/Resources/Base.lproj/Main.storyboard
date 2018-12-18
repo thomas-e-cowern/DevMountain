@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LrB-hf-PJw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--States Collection View Controller-->
+        <scene sceneID="4NN-vl-otr">
+            <objects>
+                <collectionViewController id="LrB-hf-PJw" customClass="StatesCollectionViewController" customModule="StateFlags" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cu8-fU-QMd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C6j-Mp-LFv">
+                            <size key="itemSize" width="158" height="132"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="flagCell" id="c0f-NP-ywq" customClass="StateCollectionViewCell" customModule="StateFlags" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="158" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="158" height="132"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NV" translatesAutoresizingMaskIntoConstraints="NO" id="Tjz-6b-cDe">
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="94"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="158" id="QLM-Xr-fKj"/>
+                                                <constraint firstAttribute="height" constant="94" id="afZ-47-tgB"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(State)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so8-r9-y5K">
+                                            <rect key="frame" x="8" y="94" width="142" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="so8-r9-y5K" secondAttribute="bottom" id="8dP-10-vXR"/>
+                                    <constraint firstItem="so8-r9-y5K" firstAttribute="leading" secondItem="c0f-NP-ywq" secondAttribute="leadingMargin" id="GFO-Su-o7w"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tjz-6b-cDe" secondAttribute="trailing" id="LaV-W7-UUv"/>
+                                    <constraint firstItem="Tjz-6b-cDe" firstAttribute="top" secondItem="c0f-NP-ywq" secondAttribute="top" id="QPT-oT-AwI"/>
+                                    <constraint firstItem="so8-r9-y5K" firstAttribute="top" secondItem="Tjz-6b-cDe" secondAttribute="bottom" id="bOU-OK-3xH"/>
+                                    <constraint firstItem="Tjz-6b-cDe" firstAttribute="leading" secondItem="c0f-NP-ywq" secondAttribute="leading" id="jsB-bg-uhy"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="so8-r9-y5K" secondAttribute="trailing" id="kzs-oH-DfS"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="stateFlagView" destination="Tjz-6b-cDe" id="adl-DJ-dXy"/>
+                                    <outlet property="stateLabel" destination="so8-r9-y5K" id="Oaf-ZO-1SP"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="LrB-hf-PJw" id="xnn-RZ-mHe"/>
+                            <outlet property="delegate" destination="LrB-hf-PJw" id="qoU-q9-s7I"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wv-iW-wW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151.19999999999999" y="150.67466266866569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NV" width="550" height="367"/>
+    </resources>
+</document>
