@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		416E962B21CAE37F0066DFF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 416E962A21CAE37F0066DFF4 /* AppDelegate.m */; };
+		416E963121CAE37F0066DFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416E962F21CAE37F0066DFF4 /* Main.storyboard */; };
+		416E963321CAE3870066DFF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416E963221CAE3870066DFF4 /* Assets.xcassets */; };
+		416E963621CAE3870066DFF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416E963421CAE3870066DFF4 /* LaunchScreen.storyboard */; };
+		416E963921CAE3870066DFF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 416E963821CAE3870066DFF4 /* main.m */; };
+		416E964521CAE7360066DFF4 /* TECRover.m in Sources */ = {isa = PBXBuildFile; fileRef = 416E964421CAE7360066DFF4 /* TECRover.m */; };
+		416E964821CAE7480066DFF4 /* TECPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 416E964721CAE7480066DFF4 /* TECPhoto.m */; };
+		416E964B21CAE7550066DFF4 /* TECSol.m in Sources */ = {isa = PBXBuildFile; fileRef = 416E964A21CAE7550066DFF4 /* TECSol.m */; };
+		416E964E21CAFAD00066DFF4 /* TECMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 416E964D21CAFAD00066DFF4 /* TECMarsRoverClient.m */; };
+		416E965021CB05930066DFF4 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 416E964F21CB05930066DFF4 /* APIKeys.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		416E962621CAE37F0066DFF4 /* Rover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rover.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		416E962921CAE37F0066DFF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		416E962A21CAE37F0066DFF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		416E963021CAE37F0066DFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		416E963221CAE3870066DFF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		416E963521CAE3870066DFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		416E963721CAE3870066DFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		416E963821CAE3870066DFF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		416E964321CAE7360066DFF4 /* TECRover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TECRover.h; sourceTree = "<group>"; };
+		416E964421CAE7360066DFF4 /* TECRover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TECRover.m; sourceTree = "<group>"; };
+		416E964621CAE7480066DFF4 /* TECPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TECPhoto.h; sourceTree = "<group>"; };
+		416E964721CAE7480066DFF4 /* TECPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TECPhoto.m; sourceTree = "<group>"; };
+		416E964921CAE7550066DFF4 /* TECSol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TECSol.h; sourceTree = "<group>"; };
+		416E964A21CAE7550066DFF4 /* TECSol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TECSol.m; sourceTree = "<group>"; };
+		416E964C21CAFAD00066DFF4 /* TECMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TECMarsRoverClient.h; sourceTree = "<group>"; };
+		416E964D21CAFAD00066DFF4 /* TECMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TECMarsRoverClient.m; sourceTree = "<group>"; };
+		416E964F21CB05930066DFF4 /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		416E962321CAE37F0066DFF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		416E961D21CAE37E0066DFF4 = {
+			isa = PBXGroup;
+			children = (
+				416E962821CAE37F0066DFF4 /* Rover */,
+				416E962721CAE37F0066DFF4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		416E962721CAE37F0066DFF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				416E962621CAE37F0066DFF4 /* Rover.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		416E962821CAE37F0066DFF4 /* Rover */ = {
+			isa = PBXGroup;
+			children = (
+				416E964221CAE3F30066DFF4 /* Models */,
+				416E964121CAE3F10066DFF4 /* Views */,
+				416E964021CAE3EE0066DFF4 /* Controllers */,
+				416E963F21CAE3C30066DFF4 /* Resources */,
+			);
+			path = Rover;
+			sourceTree = "<group>";
+		};
+		416E963F21CAE3C30066DFF4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				416E962921CAE37F0066DFF4 /* AppDelegate.h */,
+				416E962A21CAE37F0066DFF4 /* AppDelegate.m */,
+				416E962F21CAE37F0066DFF4 /* Main.storyboard */,
+				416E963221CAE3870066DFF4 /* Assets.xcassets */,
+				416E963421CAE3870066DFF4 /* LaunchScreen.storyboard */,
+				416E963721CAE3870066DFF4 /* Info.plist */,
+				416E964F21CB05930066DFF4 /* APIKeys.plist */,
+				416E963821CAE3870066DFF4 /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		416E964021CAE3EE0066DFF4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				416E964C21CAFAD00066DFF4 /* TECMarsRoverClient.h */,
+				416E964D21CAFAD00066DFF4 /* TECMarsRoverClient.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		416E964121CAE3F10066DFF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		416E964221CAE3F30066DFF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				416E964321CAE7360066DFF4 /* TECRover.h */,
+				416E964421CAE7360066DFF4 /* TECRover.m */,
+				416E964621CAE7480066DFF4 /* TECPhoto.h */,
+				416E964721CAE7480066DFF4 /* TECPhoto.m */,
+				416E964921CAE7550066DFF4 /* TECSol.h */,
+				416E964A21CAE7550066DFF4 /* TECSol.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		416E962521CAE37F0066DFF4 /* Rover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 416E963C21CAE3870066DFF4 /* Build configuration list for PBXNativeTarget "Rover" */;
+			buildPhases = (
+				416E962221CAE37F0066DFF4 /* Sources */,
+				416E962321CAE37F0066DFF4 /* Frameworks */,
+				416E962421CAE37F0066DFF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rover;
+			productName = Rover;
+			productReference = 416E962621CAE37F0066DFF4 /* Rover.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		416E961E21CAE37E0066DFF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Thomas Cowern New";
+				TargetAttributes = {
+					416E962521CAE37F0066DFF4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 416E962121CAE37E0066DFF4 /* Build configuration list for PBXProject "Rover" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 416E961D21CAE37E0066DFF4;
+			productRefGroup = 416E962721CAE37F0066DFF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				416E962521CAE37F0066DFF4 /* Rover */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		416E962421CAE37F0066DFF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				416E963621CAE3870066DFF4 /* LaunchScreen.storyboard in Resources */,
+				416E965021CB05930066DFF4 /* APIKeys.plist in Resources */,
+				416E963321CAE3870066DFF4 /* Assets.xcassets in Resources */,
+				416E963121CAE37F0066DFF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		416E962221CAE37F0066DFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				416E964821CAE7480066DFF4 /* TECPhoto.m in Sources */,
+				416E964E21CAFAD00066DFF4 /* TECMarsRoverClient.m in Sources */,
+				416E964521CAE7360066DFF4 /* TECRover.m in Sources */,
+				416E964B21CAE7550066DFF4 /* TECSol.m in Sources */,
+				416E963921CAE3870066DFF4 /* main.m in Sources */,
+				416E962B21CAE37F0066DFF4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		416E962F21CAE37F0066DFF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				416E963021CAE37F0066DFF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		416E963421CAE3870066DFF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				416E963521CAE3870066DFF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		416E963A21CAE3870066DFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		416E963B21CAE3870066DFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		416E963D21CAE3870066DFF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				INFOPLIST_FILE = "$(SRCROOT)/Rover/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.Rover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		416E963E21CAE3870066DFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				INFOPLIST_FILE = "$(SRCROOT)/Rover/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.Rover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		416E962121CAE37E0066DFF4 /* Build configuration list for PBXProject "Rover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				416E963A21CAE3870066DFF4 /* Debug */,
+				416E963B21CAE3870066DFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		416E963C21CAE3870066DFF4 /* Build configuration list for PBXNativeTarget "Rover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				416E963D21CAE3870066DFF4 /* Debug */,
+				416E963E21CAE3870066DFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 416E961E21CAE37E0066DFF4 /* Project object */;
+}

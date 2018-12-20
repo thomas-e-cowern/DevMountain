@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		419BC25E21C9DF4C0020326B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 419BC25D21C9DF4C0020326B /* AppDelegate.m */; };
+		419BC26421C9DF4C0020326B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419BC26221C9DF4C0020326B /* Main.storyboard */; };
+		419BC26621C9DF530020326B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419BC26521C9DF530020326B /* Assets.xcassets */; };
+		419BC26921C9DF530020326B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419BC26721C9DF530020326B /* LaunchScreen.storyboard */; };
+		419BC26C21C9DF530020326B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 419BC26B21C9DF530020326B /* main.m */; };
+		419BC27821C9E03F0020326B /* TECPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 419BC27721C9E03F0020326B /* TECPost.m */; };
+		419BC27B21C9E85D0020326B /* TECPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 419BC27A21C9E85D0020326B /* TECPostController.m */; };
+		419BC27E21C9EFD90020326B /* SearchPostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419BC27D21C9EFD90020326B /* SearchPostsTableViewController.swift */; };
+		419BC28021C9F1550020326B /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419BC27F21C9F1550020326B /* PostTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		419BC25921C9DF4C0020326B /* RedditObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		419BC25C21C9DF4C0020326B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		419BC25D21C9DF4C0020326B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		419BC26321C9DF4C0020326B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		419BC26521C9DF530020326B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		419BC26821C9DF530020326B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		419BC26A21C9DF530020326B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		419BC26B21C9DF530020326B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		419BC27621C9E03F0020326B /* TECPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TECPost.h; sourceTree = "<group>"; };
+		419BC27721C9E03F0020326B /* TECPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TECPost.m; sourceTree = "<group>"; };
+		419BC27921C9E85D0020326B /* TECPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TECPostController.h; sourceTree = "<group>"; };
+		419BC27A21C9E85D0020326B /* TECPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TECPostController.m; sourceTree = "<group>"; };
+		419BC27C21C9EFD80020326B /* RedditObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedditObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		419BC27D21C9EFD90020326B /* SearchPostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostsTableViewController.swift; sourceTree = "<group>"; };
+		419BC27F21C9F1550020326B /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		419BC25621C9DF4C0020326B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		419BC25021C9DF4C0020326B = {
+			isa = PBXGroup;
+			children = (
+				419BC25B21C9DF4C0020326B /* RedditObjC */,
+				419BC25A21C9DF4C0020326B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		419BC25A21C9DF4C0020326B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				419BC25921C9DF4C0020326B /* RedditObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		419BC25B21C9DF4C0020326B /* RedditObjC */ = {
+			isa = PBXGroup;
+			children = (
+				419BC27521C9DFC30020326B /* Models */,
+				419BC27421C9DFC10020326B /* Views */,
+				419BC27321C9DFBE0020326B /* Controllers */,
+				419BC27221C9DFA80020326B /* Resources */,
+			);
+			path = RedditObjC;
+			sourceTree = "<group>";
+		};
+		419BC27221C9DFA80020326B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				419BC25C21C9DF4C0020326B /* AppDelegate.h */,
+				419BC25D21C9DF4C0020326B /* AppDelegate.m */,
+				419BC26221C9DF4C0020326B /* Main.storyboard */,
+				419BC26521C9DF530020326B /* Assets.xcassets */,
+				419BC26721C9DF530020326B /* LaunchScreen.storyboard */,
+				419BC26A21C9DF530020326B /* Info.plist */,
+				419BC26B21C9DF530020326B /* main.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		419BC27321C9DFBE0020326B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				419BC27921C9E85D0020326B /* TECPostController.h */,
+				419BC27A21C9E85D0020326B /* TECPostController.m */,
+				419BC27D21C9EFD90020326B /* SearchPostsTableViewController.swift */,
+				419BC27C21C9EFD80020326B /* RedditObjC-Bridging-Header.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		419BC27421C9DFC10020326B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				419BC27F21C9F1550020326B /* PostTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		419BC27521C9DFC30020326B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				419BC27621C9E03F0020326B /* TECPost.h */,
+				419BC27721C9E03F0020326B /* TECPost.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		419BC25821C9DF4C0020326B /* RedditObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419BC26F21C9DF530020326B /* Build configuration list for PBXNativeTarget "RedditObjC" */;
+			buildPhases = (
+				419BC25521C9DF4C0020326B /* Sources */,
+				419BC25621C9DF4C0020326B /* Frameworks */,
+				419BC25721C9DF4C0020326B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedditObjC;
+			productName = RedditObjC;
+			productReference = 419BC25921C9DF4C0020326B /* RedditObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		419BC25121C9DF4C0020326B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Thomas Cowern New";
+				TargetAttributes = {
+					419BC25821C9DF4C0020326B = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = 419BC25421C9DF4C0020326B /* Build configuration list for PBXProject "RedditObjC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 419BC25021C9DF4C0020326B;
+			productRefGroup = 419BC25A21C9DF4C0020326B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				419BC25821C9DF4C0020326B /* RedditObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		419BC25721C9DF4C0020326B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419BC26921C9DF530020326B /* LaunchScreen.storyboard in Resources */,
+				419BC26621C9DF530020326B /* Assets.xcassets in Resources */,
+				419BC26421C9DF4C0020326B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		419BC25521C9DF4C0020326B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419BC27B21C9E85D0020326B /* TECPostController.m in Sources */,
+				419BC26C21C9DF530020326B /* main.m in Sources */,
+				419BC27821C9E03F0020326B /* TECPost.m in Sources */,
+				419BC25E21C9DF4C0020326B /* AppDelegate.m in Sources */,
+				419BC27E21C9EFD90020326B /* SearchPostsTableViewController.swift in Sources */,
+				419BC28021C9F1550020326B /* PostTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		419BC26221C9DF4C0020326B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				419BC26321C9DF4C0020326B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		419BC26721C9DF530020326B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				419BC26821C9DF530020326B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		419BC26D21C9DF530020326B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		419BC26E21C9DF530020326B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		419BC27021C9DF530020326B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				INFOPLIST_FILE = "$(SRCROOT)/RedditObjC/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.RedditObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditObjC/Controllers/RedditObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		419BC27121C9DF530020326B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56F54J4H3N;
+				INFOPLIST_FILE = "$(SRCROOT)/RedditObjC/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.RedditObjC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditObjC/Controllers/RedditObjC-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		419BC25421C9DF4C0020326B /* Build configuration list for PBXProject "RedditObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419BC26D21C9DF530020326B /* Debug */,
+				419BC26E21C9DF530020326B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		419BC26F21C9DF530020326B /* Build configuration list for PBXNativeTarget "RedditObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419BC27021C9DF530020326B /* Debug */,
+				419BC27121C9DF530020326B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 419BC25121C9DF4C0020326B /* Project object */;
+}
