@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [TECMarsRoverClient URLForInfoForRover:@"curiosity"];
+    
     
     return YES;
 }

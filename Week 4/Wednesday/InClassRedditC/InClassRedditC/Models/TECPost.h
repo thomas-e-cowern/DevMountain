@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, readonly) NSNumber *commentCount;
 @property (nonatomic, readonly) NSNumber *upVotes;
+@property (nonatomic, copy, readonly, nullable) NSString *thumbnailUrlAsString;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

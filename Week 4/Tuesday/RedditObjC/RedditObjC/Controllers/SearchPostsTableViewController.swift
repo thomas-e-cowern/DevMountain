@@ -58,8 +58,14 @@ class SearchPostsTableViewController: UITableViewController, UISearchBarDelegate
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as? PostTableViewCell else { return UITableViewCell() }
-        let post = posts?[indexPath.row]
+        guard let post = posts?[indexPath.row] else { return UITableViewCell() }
         cell.post = post
+//        guard let post = post else { return }
+        TECPostController.shared().fetchThumbnailImage(post) { (image) in
+            DispatchQueue.main.async {
+                cell.thumbnail = image
+            }
+        }
         return cell
     }
 }

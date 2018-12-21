@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+//#import "TECPostController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+//    [TECPostController fetchAllPostsForSubRedditWithTitle:@"funny" withCompletion:^(NSArray<TECPost *> * _Nullable posts) {
+//        
+//    }];
     
     return YES;
 }

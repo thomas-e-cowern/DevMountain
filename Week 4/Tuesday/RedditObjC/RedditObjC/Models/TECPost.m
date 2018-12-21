@@ -10,13 +10,14 @@
 
 @implementation TECPost
 
-- (instancetype)initWithTitle:(NSString *)title ups:(NSInteger)ups commentCount:(NSNumber *)commentCount
+- (instancetype)initWithTitle:(NSString *)title ups:(NSInteger)ups commentCount:(NSNumber *)commentCount thumbnail:(NSString *)thumbnail
 {
     self = [super init];
     if (self) {
         _title = [title copy];
         _ups = ups;
         _commentCount = [commentCount copy];
+        _thumbnail = thumbnail;
     }
     return self;
 }
@@ -27,11 +28,13 @@
     
     NSString *title = dataDictionary[[TECPost titleKey]];
     
-    NSInteger ups = [dataDictionary[[TECPost ups]] integerValue];
+    NSInteger ups = [dataDictionary[[TECPost upsKey]] integerValue];
     
     NSNumber *commentCount = dataDictionary[[TECPost commentCountKey]];
     
-    return [self initWithTitle:title ups:ups commentCount:commentCount];
+    NSString *thumbnail = dataDictionary[[TECPost thumbnailKey]];
+    
+    return [self initWithTitle:title ups:ups commentCount:commentCount thumbnail:thumbnail];
     
 }
 
@@ -41,7 +44,7 @@
     return @"title";
 }
 
-+ (NSString *)ups
++ (NSString *)upsKey
 {
     return @"ups";
 }
@@ -49,6 +52,11 @@
 + (NSString *)commentCountKey
 {
     return @"num_comments";
+}
+
++ (NSString *)thumbnailKey
+{
+    return @"thumbnail";
 }
 
 @end

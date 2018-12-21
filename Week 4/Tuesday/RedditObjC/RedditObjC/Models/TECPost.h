@@ -14,8 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *title;
 @property (nonatomic, readonly) NSInteger ups;
 @property (nonatomic, readonly) NSNumber *commentCount;
+@property (nonatomic, copy, readonly) NSString *thumbnail;
 
-- (instancetype)initWithTitle:(NSString *)title ups:(NSInteger)ups commentCount:(NSNumber *)commentCount;
+- (instancetype)initWithTitle:(NSString *)title ups:(NSInteger)ups commentCount:(NSNumber *)commentCount thumbnail:(NSString *)thumbnail;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 NS_ASSUME_NONNULL_END

@@ -8,6 +8,7 @@
 
 #import "TECPostController.h"
 #import "TECPost.h"
+#import <UIKit/UIKit.h>
 
 @implementation TECPostController
 
@@ -28,7 +29,7 @@
 }
 
 // MARK: - Fetch
-- (void)searchForPostWithSearchTerm:(NSString *)searchTerm completion:(void (^)(NSArray<TECPost *> * _Nonnull, NSError * _Nonnull))completion
+- (void)searchForPostWithSearchTerm:(NSString *)searchTerm completion:(void (^)(NSArray<TECPost *> * _Nullable, NSError * _Nullable))completion
 {
     // building up the url with search term
     NSURL *searchUrl = [self baseUrl];
@@ -71,6 +72,30 @@
         NSLog(@"%@", postsArray);
         completion(postsArray, nil);
         
+    }]resume];
+}
+
+- (void)fetchThumbnailImage: (TECPost *)post Completion:(void (^) (UIImage *))completion
+{
+    NSString *thumbnailString = [[NSString alloc] initWithFormat:@"%@", post.thumbnail];
+    NSURL *thumbnailUrl = [[NSURL alloc] initWithString:thumbnailString];
+    
+    [[[NSURLSession sharedSession] dataTaskWithURL:thumbnailUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+            completion(nil);
+            return;
+        }
+        
+        if (!data) {
+            NSLog(@" 😡 No data from thumbnail");
+            completion(nil);
+            return;
+        }
+        
+        UIImage *thumbnail = [[UIImage alloc] initWithData:data];
+        completion(thumbnail);
         
     }]resume];
 }

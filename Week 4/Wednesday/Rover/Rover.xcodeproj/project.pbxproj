@@ -17,6 +17,7 @@
 		416E964B21CAE7550066DFF4 /* TECSol.m in Sources */ = {isa = PBXBuildFile; fileRef = 416E964A21CAE7550066DFF4 /* TECSol.m */; };
 		416E964E21CAFAD00066DFF4 /* TECMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 416E964D21CAFAD00066DFF4 /* TECMarsRoverClient.m */; };
 		416E965021CB05930066DFF4 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 416E964F21CB05930066DFF4 /* APIKeys.plist */; };
+		41EE666821CC3FC100D6DFC6 /* RoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EE666721CC3FC100D6DFC6 /* RoversTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		416E964C21CAFAD00066DFF4 /* TECMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TECMarsRoverClient.h; sourceTree = "<group>"; };
 		416E964D21CAFAD00066DFF4 /* TECMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TECMarsRoverClient.m; sourceTree = "<group>"; };
 		416E964F21CB05930066DFF4 /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
+		41EE666421CC37ED00D6DFC6 /* Rover-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rover-Bridging-Header.h"; sourceTree = "<group>"; };
+		41EE666721CC3FC100D6DFC6 /* RoversTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,7 @@
 			children = (
 				416E962821CAE37F0066DFF4 /* Rover */,
 				416E962721CAE37F0066DFF4 /* Products */,
+				41EE666421CC37ED00D6DFC6 /* Rover-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +99,7 @@
 		416E964021CAE3EE0066DFF4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				41EE666721CC3FC100D6DFC6 /* RoversTableViewController.swift */,
 				416E964C21CAFAD00066DFF4 /* TECMarsRoverClient.h */,
 				416E964D21CAFAD00066DFF4 /* TECMarsRoverClient.m */,
 			);
@@ -152,6 +157,7 @@
 				TargetAttributes = {
 					416E962521CAE37F0066DFF4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				416E964821CAE7480066DFF4 /* TECPhoto.m in Sources */,
+				41EE666821CC3FC100D6DFC6 /* RoversTableViewController.swift in Sources */,
 				416E964E21CAFAD00066DFF4 /* TECMarsRoverClient.m in Sources */,
 				416E964521CAE7360066DFF4 /* TECRover.m in Sources */,
 				416E964B21CAE7550066DFF4 /* TECSol.m in Sources */,
@@ -339,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				INFOPLIST_FILE = "$(SRCROOT)/Rover/Resources/Info.plist";
@@ -348,6 +356,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.Rover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rover-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -356,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				INFOPLIST_FILE = "$(SRCROOT)/Rover/Resources/Info.plist";
@@ -365,6 +377,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vetDevHouse.Rover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rover-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

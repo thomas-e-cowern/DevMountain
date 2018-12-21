@@ -17,6 +17,7 @@
     NSString *title = dataDictionary[@"title"];
     NSNumber *upVotes = dataDictionary[@"ups"];
     NSNumber *commentCount = dataDictionary[@"num_comments"];
+    NSString *thumbnailUrlAsString = dataDictionary[@"thumbnail"];
     
     if (![title isKindOfClass:[NSString class]] || ![upVotes isKindOfClass:[NSNumber class]]  || ![commentCount isKindOfClass:[NSNumber class]]) {
         return nil;
@@ -28,6 +29,7 @@
         _title = title;
         _upVotes = upVotes;
         _commentCount = commentCount;
+        _thumbnailUrlAsString = thumbnailUrlAsString;
     } 
     return self;
 }

@@ -51,4 +51,42 @@
     }]resume];
 }
 
++ (void)fetchImageWithPost:(TECPost *)post completion:(void (^)(UIImage * _Nullable))completion
+{
+    // URL
+    NSURL *imageUrl = [[NSURL alloc] initWithString:post.thumbnailUrlAsString];
+    
+    if (!imageUrl) {
+        NSLog(@"No image url!");
+        completion(nil);
+        return;
+    }
+    // Request not needed becuase we're using defaults
+    
+    // DataTask
+    [[[NSURLSession sharedSession] dataTaskWithURL:imageUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"😡 Error requesting image with imageUrl<: %@", error.localizedDescription);
+            completion(nil);
+            return;
+        }
+        
+        if (!data) {
+            NSLog(@" 😡 No data from imageUrl<: %@", error.localizedDescription);
+            completion(nil);
+            return;
+        }
+        
+        UIImage *image = [[UIImage alloc] initWithData:data];
+        
+        if (!image) {
+            NSLog(@"There was a problem with the image<: %@", error.localizedDescription);
+        }
+        
+        completion(image);
+        return;
+        
+    }]resume];
+}
+
 @end

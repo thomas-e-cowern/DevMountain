@@ -24,8 +24,21 @@ class RedditPostTableViewCell: UITableViewCell {
     func updateViews() {
         guard let post = post else { return }
         postTitleLabel.text = post.title
-        upsLabel.text = "\(post.upVotes)"
-        commentCountLabel.text = "\(post.commentCount)"
+        upsLabel.text = "❤️ \(post.upVotes)"
+        commentCountLabel.text = "💬 \(post.commentCount)"
+        
+        TECPostController.fetchImage(with: post) { (image) in
+            guard let image = image else {
+                DispatchQueue.main.async {
+                    self.redditImageView.isHidden = true
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                self.redditImageView.isHidden = false
+                self.redditImageView.image = image
+            }
+        }
     }
 
 }

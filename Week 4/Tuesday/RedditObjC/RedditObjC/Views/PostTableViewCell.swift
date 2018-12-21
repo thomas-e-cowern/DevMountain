@@ -10,6 +10,7 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var redditImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var upsLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
@@ -20,11 +21,18 @@ class PostTableViewCell: UITableViewCell {
         }
     }
     
+    var thumbnail: UIImage? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     func updateViews() {
         guard let post = post else { return }
         titleLabel.text = post.title
         upsLabel.text = "\(post.ups) 👍"
         countLabel.text = "\(post.commentCount) 💬"
+        redditImage.image = thumbnail
     }
 
 }

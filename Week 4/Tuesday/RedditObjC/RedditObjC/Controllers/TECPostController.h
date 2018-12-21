@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 @class TECPost;
 
 @interface TECPostController : NSObject
@@ -15,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedController;
 
 - (void)searchForPostWithSearchTerm:(NSString *)searchTerm completion:(void (^) (NSArray<TECPost *> *posts, NSError  * _Nullable error))completion;
+
+- (void)fetchThumbnailImage: (TECPost *)post Completion:(void (^) (UIImage *))completion;
 
 NS_ASSUME_NONNULL_END
 @end
