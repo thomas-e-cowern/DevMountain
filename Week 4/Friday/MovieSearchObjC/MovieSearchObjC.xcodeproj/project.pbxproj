@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4106F65021CD69E30076D959 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4106F64F21CD69E30076D959 /* MovieDetailViewController.swift */; };
 		4108FDD221CD472D00C3049D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108FDD121CD472D00C3049D /* AppDelegate.m */; };
 		4108FDD821CD472D00C3049D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4108FDD621CD472D00C3049D /* Main.storyboard */; };
 		4108FDDA21CD473600C3049D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4108FDD921CD473600C3049D /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4106F64F21CD69E30076D959 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		4108FDCD21CD472D00C3049D /* MovieSearchObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSearchObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4108FDD021CD472D00C3049D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4108FDD121CD472D00C3049D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		4108FDF621CD57E700C3049D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4106F64F21CD69E30076D959 /* MovieDetailViewController.swift */,
 				4108FDF421CD57CF00C3049D /* MovieTableViewCell.swift */,
 				4108FDF221CD54FF00C3049D /* MovieTableViewController.swift */,
 			);
@@ -207,6 +210,7 @@
 				4108FDEC21CD48FD00C3049D /* TECMovie.m in Sources */,
 				4108FDF521CD57CF00C3049D /* MovieTableViewCell.swift in Sources */,
 				4108FDE021CD473600C3049D /* main.m in Sources */,
+				4106F65021CD69E30076D959 /* MovieDetailViewController.swift in Sources */,
 				4108FDD221CD472D00C3049D /* AppDelegate.m in Sources */,
 				4108FDEF21CD4B6700C3049D /* TECMovieController.m in Sources */,
 			);

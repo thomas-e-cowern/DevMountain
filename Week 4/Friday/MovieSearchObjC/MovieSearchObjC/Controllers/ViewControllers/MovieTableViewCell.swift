@@ -35,9 +35,9 @@ class MovieTableViewCell: UITableViewCell {
             DispatchQueue.main.async {
                 self.moviePosterVIew.image = poster
             }
-            
         }
         
+        // updating the outlets
         DispatchQueue.main.async {
             self.movieTitleLabel.text = movie.title
             self.movieRatingLable.text = "Rating: \(Int(truncating: movie.rating))"

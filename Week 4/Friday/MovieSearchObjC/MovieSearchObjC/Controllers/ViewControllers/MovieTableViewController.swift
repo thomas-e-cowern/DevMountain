@@ -25,7 +25,6 @@ class MovieTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return movies.count
     }
     
@@ -35,17 +34,23 @@ class MovieTableViewController: UITableViewController {
         cell.movie = movie
         return cell
     }
- 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Segueing to the movieDetailView based on row clicked, getting poster for clicked movie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toMovieDetail" {
+            if let destinationVC = segue.destination as? MovieDetailViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let movie = movies[indexPath.row]
+                    TECMovieController.fetchPoster(with: movie) { (poster) in
+                        guard let poster = poster else { return }
+                        destinationVC.poster = poster
+                    }
+                    destinationVC.movie = movie
+                }
+            }
+        }
     }
-    */
-
 }
 
 extension MovieTableViewController: UISearchBarDelegate {
@@ -65,6 +70,5 @@ extension MovieTableViewController: UISearchBarDelegate {
                 self.tableView.reloadData()
             }
         }
-        
     }
 }

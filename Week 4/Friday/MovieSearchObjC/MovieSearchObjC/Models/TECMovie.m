@@ -25,6 +25,7 @@
         _rating = rating;
         _summary = summary;
         _posterUrlAsString = posterUrlAsString;
+        // ensuring posterUrlAsString is not nil or empty
         if (_posterUrlAsString == (id)[NSNull null] || _posterUrlAsString.length == 0 ) {
             _posterUrlAsString = @" ";
         }

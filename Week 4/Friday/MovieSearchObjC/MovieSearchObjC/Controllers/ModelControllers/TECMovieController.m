@@ -92,20 +92,24 @@
     // setting up the url to get the movie poster
     NSURL *finalPosterUrl = [posterBaseUrl URLByAppendingPathComponent:movie.posterUrlAsString];
     
+    // making the poster fetch call to the API
     [[[NSURLSession sharedSession] dataTaskWithURL:finalPosterUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
+        // checking if immediate failure of poster call
         if (error) {
             NSLog(@"Error with poster session :> %@", error.localizedDescription);
             completion(nil);
             return;
         }
         
+        // checking to see if there is data
         if (!data) {
             NSLog(@"No data from poster :> %@", error.localizedDescription);
             completion(nil);
             return;
         }
         
+        // retrieving poster image
         UIImage *poster = [[UIImage alloc] initWithData:data];
         completion(poster);
     }]resume];

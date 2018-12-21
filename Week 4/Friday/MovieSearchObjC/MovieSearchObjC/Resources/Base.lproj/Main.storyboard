@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Movie Search-->
         <scene sceneID="8tr-q1-UPa">
             <objects>
                 <tableViewController id="ykP-of-gQQ" customClass="MovieTableViewController" customModule="MovieSearchObjC" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,6 +85,7 @@
                                     <outlet property="movieRatingLable" destination="Iy9-hd-iLz" id="ebg-kZ-oDa"/>
                                     <outlet property="movieSummaryLabel" destination="T6z-2b-0bB" id="sGZ-WR-8FE"/>
                                     <outlet property="movieTitleLabel" destination="V7m-Qb-Waa" id="OO9-Oa-cvc"/>
+                                    <segue destination="CDa-bZ-jsc" kind="show" identifier="toMovieDetail" id="pHW-9F-dPm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -92,7 +94,7 @@
                             <outlet property="delegate" destination="ykP-of-gQQ" id="SJS-8y-Og0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ANn-hT-4ES"/>
+                    <navigationItem key="navigationItem" title="Movie Search" id="ANn-hT-4ES"/>
                     <connections>
                         <outlet property="movieSearchBar" destination="AGX-SR-IH7" id="V7f-JO-R2p"/>
                     </connections>
@@ -100,6 +102,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTZ-Ul-9un" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="86.806596701649184"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="Lxs-wQ-BOM">
+            <objects>
+                <viewController id="CDa-bZ-jsc" customClass="MovieDetailViewController" customModule="MovieSearchObjC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="210-Dh-IGZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(Summary)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-AQ-ylg">
+                                <rect key="frame" x="20" y="544" width="335" height="113"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(Title)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLs-Ur-wZR">
+                                <rect key="frame" x="20" y="94" width="335" height="25"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jfn-GS-oQc">
+                                <rect key="frame" x="20" y="139" width="335" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="wE3-Vu-H00"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLj-Au-29R">
+                                <rect key="frame" x="20" y="509" width="335" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="AtH-fa-qrt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.2229682549" blue="0.184640577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JLj-Au-29R" firstAttribute="top" secondItem="Jfn-GS-oQc" secondAttribute="bottom" constant="20" id="4DX-7g-TuY"/>
+                            <constraint firstItem="pLs-Ur-wZR" firstAttribute="leading" secondItem="Nbw-Vh-u7A" secondAttribute="leading" constant="20" id="700-lV-ICq"/>
+                            <constraint firstItem="Jfn-GS-oQc" firstAttribute="top" secondItem="pLs-Ur-wZR" secondAttribute="bottom" constant="20" id="77o-6D-TEi"/>
+                            <constraint firstItem="Nbw-Vh-u7A" firstAttribute="trailing" secondItem="pLs-Ur-wZR" secondAttribute="trailing" constant="20" id="EZR-RO-5rY"/>
+                            <constraint firstItem="JLj-Au-29R" firstAttribute="leading" secondItem="Nbw-Vh-u7A" secondAttribute="leading" constant="20" id="Elj-F3-VrZ"/>
+                            <constraint firstItem="Nbw-Vh-u7A" firstAttribute="trailing" secondItem="Hn8-AQ-ylg" secondAttribute="trailing" constant="20" id="HA1-cc-ShN"/>
+                            <constraint firstItem="Hn8-AQ-ylg" firstAttribute="top" secondItem="JLj-Au-29R" secondAttribute="bottom" constant="10" id="JVQ-BG-9Y8"/>
+                            <constraint firstItem="Hn8-AQ-ylg" firstAttribute="leading" secondItem="Nbw-Vh-u7A" secondAttribute="leading" constant="20" id="KEz-NN-gYZ"/>
+                            <constraint firstItem="Nbw-Vh-u7A" firstAttribute="trailing" secondItem="JLj-Au-29R" secondAttribute="trailing" constant="20" id="MbP-cn-USC"/>
+                            <constraint firstItem="pLs-Ur-wZR" firstAttribute="top" secondItem="Nbw-Vh-u7A" secondAttribute="top" constant="30" id="SB8-hZ-Kkl"/>
+                            <constraint firstItem="Nbw-Vh-u7A" firstAttribute="trailing" secondItem="Jfn-GS-oQc" secondAttribute="trailing" constant="20" id="UjQ-Jl-bpI"/>
+                            <constraint firstItem="Nbw-Vh-u7A" firstAttribute="bottom" secondItem="Hn8-AQ-ylg" secondAttribute="bottom" constant="10" id="bXu-GT-tWl"/>
+                            <constraint firstItem="Jfn-GS-oQc" firstAttribute="leading" secondItem="Nbw-Vh-u7A" secondAttribute="leading" constant="20" id="iM6-aR-EIN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nbw-Vh-u7A"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieDetailPoster" destination="Jfn-GS-oQc" id="WHN-Ac-sdc"/>
+                        <outlet property="movieDetailRating" destination="JLj-Au-29R" id="CWF-nL-QzB"/>
+                        <outlet property="movieDetailSummary" destination="Hn8-AQ-ylg" id="nfF-a6-1o5"/>
+                        <outlet property="movieDetailTitle" destination="pLs-Ur-wZR" id="sdJ-Mq-9ha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQK-7Z-feL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1188" y="85"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TOg-Ud-ZzV">
