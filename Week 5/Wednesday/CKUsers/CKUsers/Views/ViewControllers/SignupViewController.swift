@@ -20,7 +20,7 @@ class SignupViewController: UIViewController {
         PetOwnerController.shared.fetchCurrentPetOwner { (success) in
             if success {
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "welcomeVC", sender: self)
+                    self.performSegue(withIdentifier: "toEntries", sender: self)
                 }
             }
         }
@@ -29,13 +29,13 @@ class SignupViewController: UIViewController {
 
     
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "welcomeVC" {
-            let destinationVC = segue.destination as! WelcomeViewController
-            let loggedInPetOwner = PetOwnerController.shared.loggedInPetOwner
-            destinationVC.petOwner = loggedInPetOwner
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toEntries" {
+//            let destinationVC = segue.destination as! WelcomeViewController
+//            let loggedInPetOwner = PetOwnerController.shared.loggedInPetOwner
+//            destinationVC.petOwner = loggedInPetOwner
+//        }
+//    }
     
 
     @IBAction func signupButtonTapped(_ sender: Any) {
@@ -43,7 +43,7 @@ class SignupViewController: UIViewController {
         PetOwnerController.shared.createPetOwner(with: email, password: password, petname: petname) { (success) in
             if success {
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "welcomeVC", sender: self)
+                    self.performSegue(withIdentifier: "toEntries", sender: self)
                 }
             }
         }

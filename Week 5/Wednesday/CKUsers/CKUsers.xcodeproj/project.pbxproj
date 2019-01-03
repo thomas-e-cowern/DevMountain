@@ -13,9 +13,11 @@
 		4165A1B021DD2D8E00EC2EEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4165A1AE21DD2D8E00EC2EEF /* LaunchScreen.storyboard */; };
 		4165A1BC21DD2DBE00EC2EEF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4165A1BB21DD2DBE00EC2EEF /* CloudKit.framework */; };
 		4165A1BE21DD304600EC2EEF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4165A1BD21DD304600EC2EEF /* SignupViewController.swift */; };
-		4165A1C021DD305600EC2EEF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4165A1BF21DD305600EC2EEF /* WelcomeViewController.swift */; };
 		4165A1C221DD316000EC2EEF /* PetOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4165A1C121DD316000EC2EEF /* PetOwner.swift */; };
 		4165A1C421DD3BB500EC2EEF /* PetOwnerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4165A1C321DD3BB500EC2EEF /* PetOwnerController.swift */; };
+		41C12A6F21DE7B9900580B55 /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C12A6E21DE7B9900580B55 /* EntriesTableViewController.swift */; };
+		41C12A7121DE7E0F00580B55 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C12A7021DE7E0E00580B55 /* Entry.swift */; };
+		41C12A7321DE87F000580B55 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C12A7221DE87F000580B55 /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +30,11 @@
 		4165A1B721DD2D9E00EC2EEF /* CKUsers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CKUsers.entitlements; sourceTree = "<group>"; };
 		4165A1BB21DD2DBE00EC2EEF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		4165A1BD21DD304600EC2EEF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		4165A1BF21DD305600EC2EEF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4165A1C121DD316000EC2EEF /* PetOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwner.swift; sourceTree = "<group>"; };
 		4165A1C321DD3BB500EC2EEF /* PetOwnerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetOwnerController.swift; sourceTree = "<group>"; };
+		41C12A6E21DE7B9900580B55 /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
+		41C12A7021DE7E0E00580B55 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		41C12A7221DE87F000580B55 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +69,11 @@
 		4165A1A421DD2D8500EC2EEF /* CKUsers */ = {
 			isa = PBXGroup;
 			children = (
+				41C12A6C21DE76A800580B55 /* Models */,
+				41C12A6B21DE76A600580B55 /* Views */,
+				41C12A6A21DE76A400580B55 /* Controllers */,
+				41C12A6921DE76A100580B55 /* Resources */,
 				4165A1B721DD2D9E00EC2EEF /* CKUsers.entitlements */,
-				4165A1A521DD2D8500EC2EEF /* AppDelegate.swift */,
-				4165A1A921DD2D8500EC2EEF /* Main.storyboard */,
-				4165A1BD21DD304600EC2EEF /* SignupViewController.swift */,
-				4165A1C121DD316000EC2EEF /* PetOwner.swift */,
-				4165A1C321DD3BB500EC2EEF /* PetOwnerController.swift */,
-				4165A1BF21DD305600EC2EEF /* WelcomeViewController.swift */,
-				4165A1AC21DD2D8E00EC2EEF /* Assets.xcassets */,
-				4165A1AE21DD2D8E00EC2EEF /* LaunchScreen.storyboard */,
-				4165A1B121DD2D8E00EC2EEF /* Info.plist */,
 			);
 			path = CKUsers;
 			sourceTree = "<group>";
@@ -85,6 +84,53 @@
 				4165A1BB21DD2DBE00EC2EEF /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41C12A6921DE76A100580B55 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4165A1AC21DD2D8E00EC2EEF /* Assets.xcassets */,
+				4165A1AE21DD2D8E00EC2EEF /* LaunchScreen.storyboard */,
+				4165A1B121DD2D8E00EC2EEF /* Info.plist */,
+				4165A1A521DD2D8500EC2EEF /* AppDelegate.swift */,
+				4165A1A921DD2D8500EC2EEF /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		41C12A6A21DE76A400580B55 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4165A1C321DD3BB500EC2EEF /* PetOwnerController.swift */,
+				41C12A7221DE87F000580B55 /* EntryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		41C12A6B21DE76A600580B55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41C12A6D21DE771900580B55 /* ViewControllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		41C12A6C21DE76A800580B55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4165A1C121DD316000EC2EEF /* PetOwner.swift */,
+				41C12A7021DE7E0E00580B55 /* Entry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		41C12A6D21DE771900580B55 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4165A1BD21DD304600EC2EEF /* SignupViewController.swift */,
+				41C12A6E21DE7B9900580B55 /* EntriesTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,11 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C12A7121DE7E0F00580B55 /* Entry.swift in Sources */,
 				4165A1C421DD3BB500EC2EEF /* PetOwnerController.swift in Sources */,
-				4165A1C021DD305600EC2EEF /* WelcomeViewController.swift in Sources */,
+				41C12A7321DE87F000580B55 /* EntryController.swift in Sources */,
 				4165A1C221DD316000EC2EEF /* PetOwner.swift in Sources */,
 				4165A1BE21DD304600EC2EEF /* SignupViewController.swift in Sources */,
 				4165A1A621DD2D8500EC2EEF /* AppDelegate.swift in Sources */,
+				41C12A6F21DE7B9900580B55 /* EntriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +367,7 @@
 				CODE_SIGN_ENTITLEMENTS = CKUsers/CKUsers.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
-				INFOPLIST_FILE = CKUsers/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CKUsers/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +386,7 @@
 				CODE_SIGN_ENTITLEMENTS = CKUsers/CKUsers.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
-				INFOPLIST_FILE = CKUsers/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CKUsers/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
