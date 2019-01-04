@@ -8,29 +8,68 @@
 
 import UIKit
 
+protocol PhotoSelectViewControllerDelegate: class {
+    func photoSelected(_ photo: UIImage)
+}
+
 class PhotoSelectViewController: UIViewController {
 
     @IBOutlet weak var pickerImageView: UIImageView!
+    @IBOutlet weak var photoSelectButton: UIButton!
+    
+    weak var delegate: PhotoSelectViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        photoSelectButton.setTitle("Select a photo", for: .normal)
+        pickerImageView.image = nil
     }
     
     @IBAction func pickerSelectImageButtonTapped(_ sender: Any) {
         print("selectImageButtonTapped")
-        let image = UIImage(named: "1-by-1-1024x1024")
-        pickerImageView.image = image
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        
+        let actionSheet = UIAlertController(title: "Select a photo", message: nil, preferredStyle: .actionSheet)
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            actionSheet.addAction(UIAlertAction(title: "Photos", style: .default, handler: { (_) in
+                imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
+                self.present(imagePickerController, animated: true, completion: nil)
+            }))
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (_) in
+                imagePickerController.sourceType = UIImagePickerController.SourceType.camera
+                self.present(imagePickerController, animated: true, completion: nil)
+            }))
+        }
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(actionSheet, animated: true)
+    }
+}
+
+extension PhotoSelectViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        if let photo = info[UIImagePickerController.InfoKey.originalImage] as?
+            UIImage {
+            photoSelectButton.setTitle("", for: .normal)
+            pickerImageView.image = photo
+            delegate?.photoSelected(photo)
+        }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
-    */
-
 }

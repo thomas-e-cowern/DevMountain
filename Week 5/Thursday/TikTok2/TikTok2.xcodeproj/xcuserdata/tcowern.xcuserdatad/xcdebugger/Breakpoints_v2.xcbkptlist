@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Timeline/Controller/AddPostTableViewController.swift"
-            timestampString = "568252279.942767"
+            filePath = "TikTok2/TokTableViewController.swift"
+            timestampString = "568275718.437497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "addPostTapped(_:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "tableView(_:leadingSwipeActionsConfigurationForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

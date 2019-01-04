@@ -104,7 +104,7 @@ class EntryController {
     }
     
     func deleteRecord(entry: Entry, completion: @escaping (Bool) -> Void) {
-        
+
         publicDB.delete(withRecordID: entry.ckRecordID) { (_, error) in
             if let error = error {
                 print("😡 There was an error in \(#function) ; \(error) ; \(error.localizedDescription)")
@@ -121,5 +121,31 @@ class EntryController {
         }
         EntryController.shared.entries.remove(at: index)
         
+    }
+    
+    func createShare(with entry: Entry, completion: @escaping (CKShare?, CKContainer?, Error?) -> Void) {
+        
+        // Creating rootrecord and sharerecord and creating share
+        let rootRecord = CKRecord(entry: entry)
+        let shareRecord = CKShare(rootRecord: rootRecord)
+        
+        // Creating operation to share record
+        let operation = CKModifyRecordsOperation(recordsToSave: [shareRecord, rootRecord], recordIDsToDelete: nil)
+        operation.perRecordCompletionBlock = { (record, error) in
+            if let error = error {
+                print("Error sharing \(entry.title): \(error.localizedDescription)")
+                completion(nil, nil, error)
+            }
+        }
+        operation.modifyRecordsCompletionBlock = { (savedRecords, deletedRecordsIDs, error) in
+            if let error = error {
+                print("Error sharing \(entry.title): \(error.localizedDescription)")
+                completion(nil, nil, error)
+            } else {
+                completion(shareRecord, CKContainer.default(), nil)
+            }
+        }
+        
+        CKContainer.default().publicCloudDatabase.add(operation)
     }
 }

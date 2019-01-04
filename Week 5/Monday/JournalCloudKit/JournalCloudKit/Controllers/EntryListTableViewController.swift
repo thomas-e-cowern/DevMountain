@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class EntryListTableViewController: UITableViewController {
     
@@ -52,6 +53,33 @@ class EntryListTableViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        //create the action
+        let sharedContectualAction = UIContextualAction(style: .normal, title: "Share") { (action, view, nil) in
+            print("Sharing this entry")
+            // Create cloud sharing container
+            let cloudSharingController = UICloudSharingController { (controller, completion: @escaping (CKShare?, CKContainer?, Error?) -> Void) in
+                let entry = EntryController.shared.entries[indexPath.row]
+                EntryController.shared.createShare(with: entry, completion: completion)
+            }
+            
+            if let popover = cloudSharingController.popoverPresentationController {
+                popover.backgroundColor = .yellow
+            }
+            
+            DispatchQueue.main.async {
+                self.present(cloudSharingController, animated: true)
+            }
+            
+        }
+        
+        sharedContectualAction.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        
+        let configuration = UISwipeActionsConfiguration(actions: [sharedContectualAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editEntry" {
