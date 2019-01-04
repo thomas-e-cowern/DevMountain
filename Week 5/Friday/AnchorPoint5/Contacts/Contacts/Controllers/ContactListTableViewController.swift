@@ -67,9 +67,7 @@ class ContactListTableViewController: UITableViewController {
             let contact = ContactController.shared.contacts[indexPath.row]
             ContactController.shared.deleteContact(contact: contact) { (success) in
                 if success {
-                    DispatchQueue.main.async {
-                        self.tableView.deleteRows(at: [indexPath], with: .automatic)
-                    }
+                    print("Record Deleted")
                 }
             }
         }
