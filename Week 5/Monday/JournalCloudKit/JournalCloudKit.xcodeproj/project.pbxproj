@@ -98,6 +98,7 @@
 		41F6930721DAB817005B5122 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41F6930D21DAB95A005B5122 /* Entry.swift */,
 				41F6931321DAC900005B5122 /* EntryDetailViewController.swift */,
 			);
 			path = Views;
@@ -106,7 +107,6 @@
 		41F6930821DAB819005B5122 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				41F6930D21DAB95A005B5122 /* Entry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

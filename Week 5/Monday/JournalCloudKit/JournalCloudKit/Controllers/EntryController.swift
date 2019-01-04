@@ -133,13 +133,13 @@ class EntryController {
         let operation = CKModifyRecordsOperation(recordsToSave: [shareRecord, rootRecord], recordIDsToDelete: nil)
         operation.perRecordCompletionBlock = { (record, error) in
             if let error = error {
-                print("Error sharing \(entry.title): \(error.localizedDescription)")
+                print("😡 Error sharing \(entry.title): \(error.localizedDescription)")
                 completion(nil, nil, error)
             }
         }
         operation.modifyRecordsCompletionBlock = { (savedRecords, deletedRecordsIDs, error) in
             if let error = error {
-                print("Error sharing \(entry.title): \(error.localizedDescription)")
+                print("😡 Error sharing \(entry.title): \(error.localizedDescription)")
                 completion(nil, nil, error)
             } else {
                 completion(shareRecord, CKContainer.default(), nil)
