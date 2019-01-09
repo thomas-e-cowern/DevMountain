@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		413D484221E541FA000B08EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D484121E541FA000B08EF /* AppDelegate.swift */; };
-		413D484421E541FA000B08EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D484321E541FA000B08EF /* ViewController.swift */; };
-		413D484721E541FA000B08EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413D484521E541FA000B08EF /* Main.storyboard */; };
 		413D484921E54213000B08EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413D484821E54213000B08EF /* Assets.xcassets */; };
 		413D484C21E54213000B08EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413D484A21E54213000B08EF /* LaunchScreen.storyboard */; };
+		413D485821E54A0F000B08EF /* SDTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D485721E54A0E000B08EF /* SDTViewController.swift */; };
+		413D485A21E55393000B08EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413D485921E55391000B08EF /* Main.storyboard */; };
+		41AAEEB221E5800B00F620C3 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AAEEB121E5800B00F620C3 /* HistoryTableViewController.swift */; };
+		41AAEEB421E5804E00F620C3 /* SDTController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AAEEB321E5804E00F620C3 /* SDTController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		413D483E21E541FA000B08EF /* SDTCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDTCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413D484121E541FA000B08EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		413D484321E541FA000B08EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		413D484621E541FA000B08EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		413D484821E54213000B08EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413D484B21E54213000B08EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		413D484D21E54213000B08EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		413D485721E54A0E000B08EF /* SDTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SDTViewController.swift; path = ../../../../../.Trash/SDTViewController.swift; sourceTree = "<group>"; };
+		413D485921E55391000B08EF /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		41AAEEB121E5800B00F620C3 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		41AAEEB321E5804E00F620C3 /* SDTController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDTController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,10 @@
 		413D483521E541F9000B08EF = {
 			isa = PBXGroup;
 			children = (
+				413D485721E54A0E000B08EF /* SDTViewController.swift */,
+				41AAEEB121E5800B00F620C3 /* HistoryTableViewController.swift */,
+				41AAEEB321E5804E00F620C3 /* SDTController.swift */,
+				413D485921E55391000B08EF /* Main.storyboard */,
 				413D484021E541FA000B08EF /* SDTCalculator */,
 				413D483F21E541FA000B08EF /* Products */,
 			);
@@ -55,8 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				413D484121E541FA000B08EF /* AppDelegate.swift */,
-				413D484321E541FA000B08EF /* ViewController.swift */,
-				413D484521E541FA000B08EF /* Main.storyboard */,
 				413D484821E54213000B08EF /* Assets.xcassets */,
 				413D484A21E54213000B08EF /* LaunchScreen.storyboard */,
 				413D484D21E54213000B08EF /* Info.plist */,
@@ -122,9 +128,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413D485A21E55393000B08EF /* Main.storyboard in Resources */,
 				413D484C21E54213000B08EF /* LaunchScreen.storyboard in Resources */,
 				413D484921E54213000B08EF /* Assets.xcassets in Resources */,
-				413D484721E541FA000B08EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +141,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				413D484421E541FA000B08EF /* ViewController.swift in Sources */,
+				413D485821E54A0F000B08EF /* SDTViewController.swift in Sources */,
+				41AAEEB421E5804E00F620C3 /* SDTController.swift in Sources */,
 				413D484221E541FA000B08EF /* AppDelegate.swift in Sources */,
+				41AAEEB221E5800B00F620C3 /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		413D484521E541FA000B08EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				413D484621E541FA000B08EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		413D484A21E54213000B08EF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
