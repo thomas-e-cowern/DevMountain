@@ -9,42 +9,75 @@
 import UIKit
 
 class ShuffleTableViewController: UITableViewController {
-
-    var testData: [[String]] = []
+    @IBOutlet weak var nameTextBox: UISearchBar!
+    @IBOutlet weak var shuffleButton: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
+    var names: [String] = ["Steve", "John", "Bill", "Karen", "Debby", "Marion", "Betty"]
+    var groupedNames: [[String]] = []
+    var shuffledNames: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        testData = [["Steve", "John"], ["Bill", "Karen"], ["Debby", "Marion"], ["Betty"]]
+        tableView.delegate = self
+        groupedNames = groupNames(names: names)
         tableView.reloadData()
     }
 
+    func groupNames (names: [String]) -> [[String]] {
+        return names.chunked(into: 2)
+    }
+    
+    func shuffleNames (names: [String]) -> [String] {
+        var names = names
+        var shuffled = [String]()
+        for _ in 0..<names.count {
+            let rand = Int(arc4random_uniform(UInt32(names.count)))
+            shuffled.append(names[rand])
+            names.remove(at: rand)
+        }
+        return shuffled
+    }
+    
+    @IBAction func shuffleButtonPressed(_ sender: Any) {
+        shuffledNames = shuffleNames(names: names)
+        print(shuffledNames)
+        groupedNames = groupNames(names: shuffledNames)
+        print(groupedNames)
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        print("In addButtonPressed")
+        guard let newName = nameTextBox.text else { print("😡 There was a guard return error in \(#function)"); return }
+        names.append(newName)
+//        print("aBP names: \(names)")
+        groupedNames = groupNames(names: names)
+//        print("aBP groupedNames: \(groupedNames)")
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+    }
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return testData.count
+        print("GN: \(groupedNames)")
+        return groupedNames.count
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Group \(section)"
+        return "Group \(section + 1)"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return testData.count / 2
+        return groupedNames[section].count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath)
-        var name = ""
-        for i in 0..<testData.count {
-            for j in 0..<testData[i].count {
-                name = testData[i][j]
-                cell.textLabel?.text = name
-                return cell
-            }
-        }
+        cell.textLabel?.text =  groupedNames[indexPath.section][indexPath.row]
         return cell
     }
     
@@ -94,4 +127,12 @@ class ShuffleTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
+    }
 }

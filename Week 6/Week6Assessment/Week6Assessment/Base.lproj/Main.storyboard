@@ -47,9 +47,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8iz-tH-Gpu">
-                        <barButtonItem key="leftBarButtonItem" title="Shuffle" id="HeT-7L-ccW"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Uzl-82-zLq"/>
+                        <barButtonItem key="leftBarButtonItem" title="Shuffle" id="HeT-7L-ccW">
+                            <connections>
+                                <action selector="shuffleButtonPressed:" destination="NBW-ox-k6m" id="xfp-DT-IoP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Uzl-82-zLq">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="NBW-ox-k6m" id="zly-6u-UoO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="Uzl-82-zLq" id="dfh-2u-ahG"/>
+                        <outlet property="nameTextBox" destination="Szr-Wf-Iqw" id="KM8-Eq-ejA"/>
+                        <outlet property="shuffleButton" destination="HeT-7L-ccW" id="3RI-4J-voG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS2-fi-sUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
