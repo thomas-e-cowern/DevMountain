@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vyy-oU-2nx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KSF-Vv-sT2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" id="KSF-Vv-sT2">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KSF-Vv-sT2" id="BUL-O0-JFF">
@@ -38,12 +38,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="DK7-OX-fHB">
-                        <barButtonItem key="leftBarButtonItem" title="Randomize" id="vqq-fD-6en">
+                        <barButtonItem key="leftBarButtonItem" title="Shuffle Groups" id="vqq-fD-6en">
                             <connections>
                                 <action selector="randomizeButtonPressed:" destination="cDN-sT-pa0" id="Yw6-8U-r1h"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ke4-2E-BC4">
+                        <barButtonItem key="rightBarButtonItem" title="Add Person" id="ke4-2E-BC4">
                             <connections>
                                 <action selector="addNameButtonPressed:" destination="cDN-sT-pa0" id="DcL-BN-Dts"/>
                             </connections>

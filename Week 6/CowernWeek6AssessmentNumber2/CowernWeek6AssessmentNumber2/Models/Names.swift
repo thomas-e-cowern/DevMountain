@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+class Names: Equatable, Codable {
+    
+    // MARK: - Properties
+    var name: [[String]]
+    
+    // MARK: - Initializer
+    init(name: String) {
+        self.name = [[name]]
+    }
+    
+    // MARK: - Equatable
+    static func == (lhs: Names, rhs: Names) -> Bool {
+        if lhs.name == rhs.name {
+            return true
+        } else {
+            return false
+        }
+    }
+}
