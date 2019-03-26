@@ -13,8 +13,9 @@ class ShuffleTableViewController: UITableViewController {
     @IBOutlet weak var shuffleButton: UIBarButtonItem!
     @IBOutlet weak var addButton: UIBarButtonItem!
     
-    var names: [String] = ["Steve", "John", "Bill", "Karen", "Debby", "Marion", "Betty"]
+    var names: [String] = []
     var groupedNames: [[String]] = []
+    var newGroupedNames: [[String]] = []
     var shuffledNames: [String] = []
     
     override func viewDidLoad() {
@@ -49,15 +50,82 @@ class ShuffleTableViewController: UITableViewController {
     
     @IBAction func addButtonPressed(_ sender: Any) {
         print("In addButtonPressed")
+        
+        var newArray: [String] = []
         guard let newName = nameTextBox.text else { print("😡 There was a guard return error in \(#function)"); return }
         names.append(newName)
+        print("names: \(names)")
 //        print("aBP names: \(names)")
-        groupedNames = groupNames(names: names)
+//        groupedNames = groupNames(names: names)
 //        print("aBP groupedNames: \(groupedNames)")
+        print(groupedNames.last?.count)
+//        print(newGroupedNames.count)
+        var arrayIndex: Int = 0
+        arrayIndex = groupedNames.count - 1
+        print("arrayIndex: \(arrayIndex)")
+        
+//        guard let lastGroupCount = newGroupedNames.last?.count else { return }
+//        print("LGC: \(lastGroupCount)")
+//        USE THIS RIGHT HERE......
+        if groupedNames.count == 0 || groupedNames.last?.count == 2 {
+            print("Inside newGroupedNames if")
+            newArray.append(newName)
+            groupedNames.append(newArray)
+        } else {
+            groupedNames[arrayIndex].append(newName)
+        }
+        
+        print("NGN: \(groupedNames)")
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+        nameTextBox.text = ""
+    }
+    
+    func fileURL() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        let fileName = "names.json"
+        let fullURL = documentsDirectory.appendingPathComponent(fileName)
         
+        print(fullURL)
+        
+        return(fullURL)
+    }
+    
+    func saveToPersistentStore() {
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(self.names)
+            try data.write(to: fileURL())
+        } catch {
+            print("Error: \(#function): \(error) : \(error.localizedDescription)")
+        }
+    }
+    
+//    func loadFromPersistenceStore() -> [<#array name#>] {
+//        do {
+//            let data = try Data(contentsOf: fileURL())
+//            let decoder = JSONDecoder()
+//            let <#var name#> = try decoder.decode([<#array name#>].self, from: data)
+//            return <#var name#>
+//        } catch  {
+//            print("Error: \(#function): \(error) : \(error.localizedDescription)")
+//        }
+//
+//        return []
+//    }
+    
+    func deleteName (section: Int, row: Int) {
+        print("Inside Delete Names")
+        print("Section: \(section) Row: \(row)")
+        if row == 1 {
+            groupedNames[section].remove(at: row)
+        } else {
+            groupedNames.remove(at: section)
+        }
+        
+        print("deleteNames: \(groupedNames)")
     }
     
     // MARK: - Table view data source
@@ -80,54 +148,37 @@ class ShuffleTableViewController: UITableViewController {
         cell.textLabel?.text =  groupedNames[indexPath.section][indexPath.row]
         return cell
     }
+
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
+            deleteName(section: indexPath.section, row: indexPath.row)
+//            print("IPS: \(indexPath.section)")
+//            print("IPR: \(indexPath.row)")
+//            let section = indexPath.section
+//            let row = indexPath.row
+//            print(groupedNames[section][row])
+//            groupedNames[indexPath.section].remove(at: indexPath.row)  *************
+//            print(groupedNames)
+//            groupedNames = groupNames(names: names)
+            
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+//            print("IPS: \(indexPath.section)")
+//            print("IPR: \(indexPath.row)")
+//            groupedNames.remove(at: [indexPath.section][indexPath.row])
+
+            tableView.reloadData()
+//            print(groupedNames)
+//            print("IP: \(indexPath.section)")
+//            let indexPath = IndexPath(item: indexPath.row, section: indexPath.section)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
 
 extension Array {
     func chunked(into size: Int) -> [[Element]] {
