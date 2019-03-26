@@ -10,15 +10,17 @@ import UIKit
 
 class NamesListTableViewController: UITableViewController {
     
-    // MARK: - Outlets
-    @IBOutlet weak var nameSearchBar: UISearchBar!
-    
     // MARK: - Properties
     var groupedNames: [[Names]] = []
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         updateViews()
     }
 
@@ -41,9 +43,20 @@ class NamesListTableViewController: UITableViewController {
     
     // Adds a new name to the array
     @IBAction func addNameButtonPressed(_ sender: Any) {
-        guard let name = nameSearchBar.text else { print("😡 There was a guard return error in \(#function)"); return }
-        NamesController.shared.addName(name: name)
-        nameSearchBar.text = ""
+        let alertController = UIAlertController(title: "Add Name", message: "Enter a name", preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Add a name..."
+        }
+        let addAction = UIAlertAction(title: "Add", style: .default) { (_) in
+            guard let textField = alertController.textFields?.first else { print("😡 There was a guard return error in \(#function)"); return }
+            guard let name = textField.text else { print("😡 There was a guard return error in \(#function)"); return }
+            NamesController.shared.addName(name: name)
+            self.updateViews()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
         updateViews()
     }
     
@@ -79,3 +92,4 @@ class NamesListTableViewController: UITableViewController {
         }
     }
 }
+
